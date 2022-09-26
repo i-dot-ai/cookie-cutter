@@ -19,7 +19,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    "{{cookiecutter.package_name}}.{{cookiecutter.appname}}",
+    "{{cookiecutter.package_name}}.{{cookiecutter.app_name}}",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -107,7 +107,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "{{cookiecutter.appname}}.User"
+AUTH_USER_MODEL = "{{cookiecutter.app_name}}.User"
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
