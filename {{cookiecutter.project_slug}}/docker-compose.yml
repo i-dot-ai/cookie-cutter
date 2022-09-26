@@ -15,7 +15,7 @@ services:
     volumes:
       - ./:/app/:z
     ports:
-      - "8008:8008"
+      - "{{cookiecutter.port}}:{{cookiecutter.port}}"
 
   db:
     image: postgres:13
