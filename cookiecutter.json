@@ -3,6 +3,7 @@
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "app_name": "",
+  "port": "8000",
   "_copy_without_render": [
     "*/templates/*.html"
   ]
