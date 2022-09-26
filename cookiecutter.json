@@ -1,5 +1,6 @@
 {
   "project_name": "Default Project Name",
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
-  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}"
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "app_name": ""
 }
