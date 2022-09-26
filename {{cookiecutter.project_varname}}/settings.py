@@ -19,7 +19,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    "{{cookiecutter.project_varname}}.{{cookiecutter.appname}}",
+    "{{cookiecutter.package_name}}.{{cookiecutter.appname}}",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -43,20 +43,20 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "{{cookiecutter.project_varname}}.urls"
+ROOT_URLCONF = "{{cookiecutter.package_name}}.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.jinja2.Jinja2",
         "DIRS": [
-            BASE_DIR / "{{cookiecutter.project_varname}}" / "templates",
+            BASE_DIR / "{{cookiecutter.package_name}}" / "templates",
         ],
-        "OPTIONS": {"environment": "{{cookiecutter.project_varname}}.jinja2.environment"},
+        "OPTIONS": {"environment": "{{cookiecutter.package_name}}.jinja2.environment"},
     },
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            BASE_DIR / "{{cookiecutter.project_varname}}" / "templates" / "allauth",
+            BASE_DIR / "{{cookiecutter.package_name}}" / "templates" / "allauth",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "{{cookiecutter.project_varname}}.wsgi.application"
+WSGI_APPLICATION = "{{cookiecutter.package_name}}.wsgi.application"
 
 DATABASES = {
     "default": {

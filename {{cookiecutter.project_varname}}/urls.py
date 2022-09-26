@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
 
-from {{cookiecutter.project_varname}}.{{cookiecutter.appname}} import views
+from {{cookiecutter.package_name}}.{{cookiecutter.appname}} import views
 
 urlpatterns = [
     path("", views.index_view, name="index"),

@@ -19,7 +19,7 @@ RUN chmod +x /start.sh
 COPY . /app
 
 RUN \
-    DJANGO_SETTINGS_MODULE={{cookiecutter.project_varname}}.settings_base \
+    DJANGO_SETTINGS_MODULE={{cookiecutter.package_name}}.settings_base \
     DJANGO_SECRET_KEY="temp" \
     python manage.py collectstatic --no-input
 
