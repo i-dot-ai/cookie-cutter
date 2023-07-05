@@ -21,6 +21,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
 ]
 
+# CSRF settings
+CSRF_COOKIE_HTTPONLY = True
 
 # Application definition
 

@@ -7,7 +7,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/web/Dockerfile
     depends_on:
       - db
     env_file:
@@ -32,3 +32,23 @@ services:
       - utils
     volumes:
       - ./:/app/:z
+
+  tests-{{cookiecutter.package_name}}:
+    build:
+      context: .
+      dockerfile: ./docker/tests/Dockerfile
+    image: tests_{{cookiecutter.package_name}}
+    env_file:
+      - ./envs/tests
+    profiles:
+      - testing
+    depends_on:
+      - {{cookiecutter.package_name}}-test-db
+
+  {{cookiecutter.package_name}}-test-db:
+    image: postgres:13
+    container_name: {{cookiecutter.package_name}}_test_postgres
+    env_file:
+      - ./envs/tests
+    expose:
+      - "5432"
