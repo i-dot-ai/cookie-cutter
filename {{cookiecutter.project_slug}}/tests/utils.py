@@ -3,6 +3,8 @@ import functools
 import httpx
 import testino
 
+import {{cookiecutter.package_name}}.wsgi
+
 TEST_SERVER_URL = "http://{{cookiecutter.package_name}}-testserver:8010/"
 
 
