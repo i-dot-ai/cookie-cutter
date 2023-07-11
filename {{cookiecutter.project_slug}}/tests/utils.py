@@ -5,7 +5,7 @@ import testino
 
 import {{cookiecutter.package_name}}.wsgi
 
-TEST_SERVER_URL = "http://{{cookiecutter.package_name}}-testserver:8010/"
+TEST_SERVER_URL = "http://{{cookiecutter.project_slug}}-testserver:{{cookiecutter.port}}/"
 
 
 def with_client(func):
