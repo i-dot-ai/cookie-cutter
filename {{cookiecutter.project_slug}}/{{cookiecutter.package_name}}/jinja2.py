@@ -12,6 +12,17 @@ def url(path, *args, **kwargs):
 
 
 def markdown(text, cls=None):
+    """
+    Converts the given text into markdown.
+    The `replace` statement replaces the outer <p> tag with one that contains the given class, otherwise the markdown
+    ends up double wrapped with <p> tags.
+    Args:
+        text: The text to convert to markdown
+        cls (optional): The class to apply to the outermost <p> tag surrounding the markdown
+
+    Returns:
+        Text converted to markdown
+    """
     html = markdown_converter.render(text).strip()
     html = html.replace("<p>", f'<p class="{cls or ""}">', 1).replace("</p>", "", 1)
     return html
