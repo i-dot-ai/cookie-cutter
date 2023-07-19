@@ -3,7 +3,7 @@ from django.templatetags.static import static
 from django.urls import reverse
 from markdown_it import MarkdownIt
 
-markdown_converter = MarkdownIt()
+markdown_converter = MarkdownIt("js-default")
 
 
 def url(path, *args, **kwargs):
