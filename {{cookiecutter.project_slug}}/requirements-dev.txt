@@ -7,5 +7,6 @@ black
 nose
 httpx
 testino
+bandit
 
 -r ./requirements.lock

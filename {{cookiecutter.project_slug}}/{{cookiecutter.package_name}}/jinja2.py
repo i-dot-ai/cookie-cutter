@@ -30,8 +30,9 @@ def markdown(text, cls=None):
 
 def environment(**options):
     extra_options = dict()
-    env = jinja2.Environment(
+    env = jinja2.Environment(  # nosec B701
         **{
+            "autoescape": True,
             **options,
             **extra_options,
         }
