@@ -15,12 +15,18 @@ STATIC_ROOT = STATIC_ROOT
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
+VCAP_APPLICATION = env.json("VCAP_APPLICATION", default={})
+BASE_URL = env.str("BASE_URL")
+
 ALLOWED_HOSTS = [
+    "{{cookiecutter.project_slug}}-testserver",
     "{{cookiecutter.project_slug}}-develop.london.cloudapps.digital",
     "localhost",
     "127.0.0.1",
 ]
 
+# CSRF settings
+CSRF_COOKIE_HTTPONLY = True
 
 # Application definition
 

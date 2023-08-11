@@ -1,0 +1,12 @@
+DJANGO_SETTINGS_MODULE={{cookiecutter.package_name}}.settings
+PORT={{cookiecutter.port}}
+DEBUG=True
+DJANGO_SECRET_KEY='1n53cur3K3y'
+POSTGRES_HOST={{cookiecutter.package_name}}-test-db
+POSTGRES_PORT=5432
+POSTGRES_DB={{cookiecutter.project_slug}}
+POSTGRES_USER={{cookiecutter.project_slug}}
+POSTGRES_PASSWORD=insecure
+PGPASSWORD=insecure
+DATABASE_URL="postgres://{{cookiecutter.project_slug}}:insecure@{{cookiecutter.package_name}}-test-db:5432/{{cookiecutter.project_slug}}"
+BASE_URL=http://localhost:{{cookiecutter.port}}/
