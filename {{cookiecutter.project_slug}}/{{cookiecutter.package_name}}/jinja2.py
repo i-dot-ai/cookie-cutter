@@ -3,6 +3,8 @@ from django.templatetags.static import static
 from django.urls import reverse
 from markdown_it import MarkdownIt
 
+# `js-default` setting required to sanitize inputs
+# https://markdown-it-py.readthedocs.io/en/latest/security.html
 markdown_converter = MarkdownIt("js-default")
 
 

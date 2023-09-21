@@ -18,9 +18,8 @@ DEBUG = env.bool("DEBUG", default=False)
 VCAP_APPLICATION = env.json("VCAP_APPLICATION", default={})
 BASE_URL = env.str("BASE_URL")
 
+# Add AWS URLS to ALLOWED_HOSTS once known
 ALLOWED_HOSTS = [
-    "{{cookiecutter.project_slug}}-testserver",
-    "{{cookiecutter.project_slug}}-develop.london.cloudapps.digital",
     "localhost",
     "127.0.0.1",
 ]
@@ -53,6 +52,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "csp.middleware.CSPMiddleware",
+    "django_permissions_policy.PermissionsPolicyMiddleware",
+    "django_permissions_policy.PermissionsPolicyMiddleware",
 ]
 
 ROOT_URLCONF = "{{cookiecutter.package_name}}.urls"
@@ -128,3 +130,32 @@ ACCOUNT_USERNAME_REQUIRED = False
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = "none"
 LOGIN_REDIRECT_URL = "homepage"
+
+if not DEBUG:
+    SECURE_HSTS_SECONDS = 2 * 365 * 24 * 60 * 60  # Mozilla's guidance max-age 2 years
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+PERMISSIONS_POLICY = {
+    "accelerometer": [],
+    "autoplay": [],
+    "camera": [],
+    "display-capture": [],
+    "encrypted-media": [],
+    "fullscreen": [],
+    "gamepad": [],
+    "geolocation": [],
+    "gyroscope": [],
+    "microphone": [],
+    "midi": [],
+    "payment": [],
+}
+
+
+CSP_DEFAULT_SRC = ("'self'",)
+# SHA of the location of the stylesheet (main.css)
+
+CSP_STYLE_SRC = (
+    "'self'",
+)
+
+CSRF_COOKIE_HTTPONLY = True

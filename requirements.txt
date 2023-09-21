@@ -10,3 +10,6 @@ waitress
 psycopg2-binary
 pyyaml
 markdown-it-py
+pytz
+django-csp
+django-permissions-policy
