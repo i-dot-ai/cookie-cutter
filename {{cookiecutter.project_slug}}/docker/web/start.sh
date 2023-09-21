@@ -9,4 +9,11 @@ echo "Migrations completed"
 
 echo "Starting app"
 
-watchmedo auto-restart --directory=./  --pattern=""*.py"" --recursive -- waitress-serve --port=$PORT --threads=8 {{cookiecutter.package_name}}.wsgi:application
+echo "Using '$ENVIRONMENT' environment settings"
+
+if [ "$ENVIRONMENT" = "LOCAL" ]
+then
+    gunicorn --reload --workers 3 {{cookiecutter.package_name}}.wsgi:application
+else
+    gunicorn --workers 3 {{cookiecutter.package_name}}.wsgi:application
+fi
