@@ -2,9 +2,11 @@
   "project_name": "Default Project Name",
   "package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
-  "app_name": "",
+  "app_name": "Default App Name",
   "port": "8000",
   "_copy_without_render": [
-    "*/templates/*.html"
+    "*/templates/*.html",
+    "*/templates/email/*.txt"
+
   ]
 }

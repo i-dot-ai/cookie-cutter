@@ -1,7 +1,7 @@
 Hi,
 
 You can use the following link to sign in to your <service_name> account:
-url|safe  # Re-add curly braces around this URL, cookie cutter doesn't like it
+{{url|safe}}
 
 You can only use this link once. If you do not use it within 1 hour, it will expire.
 
