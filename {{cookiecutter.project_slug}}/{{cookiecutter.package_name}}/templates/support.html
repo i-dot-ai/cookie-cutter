@@ -2,31 +2,29 @@
 {% extends "base_generic_gov.html" %}
 
 {% block title %}
-  <title>Support - One Big Thing - GOV.UK</title>
+  <title>Support - <SYSTEM_NAME> - GOV.UK</title>
 {% endblock %}
 
 {% block content %}
   <h1 class="govuk-heading-l">Support</h1>
-  <span class="govuk-caption-l">Find out about the One Big Thing website, including how to sign in and use your One Big Thing account.</span>
+  <span class="govuk-caption-l">Find out about the One Big Thing website, including how to sign in and use your <SYSTEM_NAME> account.</span>
   <br>
   <h2 class="govuk-heading-m">User guide</h2>
-  <iframe src="https://player.vimeo.com/video/860937749?h=05caad19d6" class="video--iframe" frameborder="0" allowfullscreen title="One Big Thing support video"></iframe>
-  <p class="govuk-body">You can download the <a target="_blank" rel="noopener noreferrer" href="{{static('UserGuide-OBT.pdf')}}" class="govuk-link">One Big Thing User Guide (PDF, 1.1MB)</a>, a step-by-step guide to signing in and using your One Big Thing account.</p>
+  <iframe src="https://player.vimeo.com/video/860937749?h=05caad19d6" class="video--iframe" frameborder="0" allowfullscreen title="<SYSTEM_NAME> support video"></iframe>
+  <p class="govuk-body">You can download the <a target="_blank" rel="noopener noreferrer" href="{{static('<USER_GUIDE_LOCATION>.pdf')}}" class="govuk-link"><SYSTEM_NAME> User Guide (PDF, 1.1MB)</a>, a step-by-step guide to signing in and using your <SYSTEM_NAME> account.</p>
 
-  <h2 class="govuk-heading-m">Accessing One Big Thing</h2>
-  <p class="govuk-body">You can access your One Big Thing account by visiting <a href="https://onebigthing.civilservice.gov.uk" class="govuk-link">onebigthing.civilservice.gov.uk</a>. You'll need to type your work email address in the box provided and select the submit button.</p>
-  <p class="govuk-body">You do not need a password. Instead, we'll send you a link to sign in.</p>
-  <p class="govuk-body">Each time you visit <a href="https://onebigthing.civilservice.gov.uk" class="govuk-link">onebigthing.civilservice.gov.uk</a> you'll need to enter your email address again and we'll send you a new link to sign in.</p>
+  <h2 class="govuk-heading-m">Accessing <SYSTEM_NAME></h2>
+  <p class="govuk-body">You can access your <SYSTEM_NAME> account by visiting <a href="<SYSTEM_URL>" class="govuk-link"><SYSTEM_URL></a>. You'll need to type your work email address in the box provided and select the submit button.</p>
 
   <h2 class="govuk-heading-m">Signing in</h2>
-  <p class="govuk-body">If you're having trouble signing in to the One Big Thing platform, check that:</p>
+  <p class="govuk-body">If you're having trouble signing in to the <SYSTEM_NAME> platform, check that:</p>
 
   <ul class="govuk-list govuk-list--bullet">
     <li>you're using your work email address</li>
     <li>you've typed your work email address correctly</li>
   </ul>
 
-  <p class="govuk-body">You should check your junk or spam folder for an email from One Big Thing.</p>
+  <p class="govuk-body">You should check your junk or spam folder for an email from <SYSTEM_NAME>.</p>
 
   <p class="govuk-body">If you're still having trouble, ask your line manager for support. If the user guide doesn't have the answer then you can contact us using the details at the bottom of this page.</p>
 
@@ -63,7 +61,7 @@
 
   <p class="govuk-body">These can be accessed from your One Big Thing account under the heading "See e-learning for all learning levels"</p>
 
-  <h2 class="govuk-heading-m">Completing One Big Thing</h2>
+  <h2 class="govuk-heading-m">Completing <SYSTEM_NAME></h2>
   <p class="govuk-body">One Big Thing is encouraging all civil servants to complete 7 hours of learning on the topic of data. </p>
   <p class="govuk-body">You should talk to your line manager to decide how much learning you want to complete. </p>
   <p class="govuk-body">You can use the Record Learning page on your One Big Thing account to keep track of the learning you've done. </p>

@@ -2,12 +2,12 @@
 {% extends "base_generic_gov.html" %}
 
 {% block title %}
-  <title>Privacy notice - One Big Thing - GOV.UK</title>
+  <title>Privacy notice - <SYSTEM_NAME> - GOV.UK</title>
 {% endblock %}
 
 
 {% block content %}
-  <h1 class="govuk-heading-l">Privacy notice for One Big Thing platform</h1>
+  <h1 class="govuk-heading-l">Privacy notice for <SYSTEM_NAME> platform</h1>
   <div class="govuk-body">
     <p class="govuk-body-l">This notice sets out how we will use your personal data, and your rights. It is made under Articles 13 and/or 14 of the UK General Data Protection Regulation (UK GDPR).</p>
 
@@ -15,19 +15,15 @@
     <h3 class="govuk-heading-s">Purpose</h3>
     <p class="govuk-body">The purpose(s) for which we are processing your personal data is (are):</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>enabling  login to the platform</li>
+      <li>enabling login to the platform</li>
       <li>emailing you reminders of actions required</li>
-      <li>(with consent) contacting post One Big Thing to support evaluation</li>
-      <li>Department, grade, and area of work/profession information will be aggregated and used for anonymous further analysis</li>
+      <li><PID_COLLECTED> information will be aggregated and used for anonymous further analysis</li>
     </ul>
 
     <h3 class="govuk-heading-s">The data</h3>
     <p class="govuk-body">We will process the following personal data:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>organisational email address</li>
-      <li>department</li>
-      <li>grade</li>
-      <li>profession/area of work</li>
     </ul>
 
 
@@ -38,11 +34,11 @@
     </ul>
 
     <h3 class="govuk-heading-s">Recipients</h3>
-    <p class="govuk-body">Your personal data will be shared by us with analysts/researchers within the Cabinet Office if you have consented to be contacted further about One Big Thing.</p>
+    <p class="govuk-body">Your personal data will be shared by us with analysts/researchers within the Cabinet Office if you have consented to be contacted further about <SYSTEM_NAME>.</p>
     <p class="govuk-body">As your personal data will be stored on our IT infrastructure it will also be shared with our data processors who provide email, and document management and storage services.</p>
 
     <h3 class="govuk-heading-s">Retention</h3>
-    <p class="govuk-body">Your personal data will be retained for 12 months after account inactivity. At that point we will delete your email address, depersonalising the data we hold. If you have provided us consent to contact you, we will retain your email until 31st July 2024 and continue sharing it with evaluators so they can conduct research on the long term impact of One Big Thing.</p>
+    <p class="govuk-body">Your personal data will be retained for 12 months after account inactivity. At that point we will delete your email address, depersonalising the data we hold. If you have provided us consent to contact you, we will retain your email until <DATE> and continue sharing it with evaluators so they can conduct research on the long term impact of <SYSTEM_NAME>.</p>
 
     <h3 class="govuk-heading-s">Your rights</h3>
     <p class="govuk-body">You have the right to request information about how your personal data are processed, and to request a copy of that personal data.</p>
@@ -67,6 +63,6 @@
 
     <h3 class="govuk-heading-s">Changes to this notice</h3>
     <p class="govuk-body">We may change this privacy notice. When we make changes to this notice, the "last updated" date at the bottom of this page will also change. Any changes to this privacy notice will apply to you and your data immediately. If these changes affect how your personal data is processed, Cabinet Office will take reasonable steps to make sure you know.</p>
-    <p class="govuk-body">Last updated: 18 September 2023</p>
+    <p class="govuk-body">Last updated: <DATE></p>
   </div>
 {% endblock %}
