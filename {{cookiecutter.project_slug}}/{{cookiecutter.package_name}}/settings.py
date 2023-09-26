@@ -134,10 +134,10 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
     {
-        "NAME": "one_big_thing.custom_password_validators.SpecialCharacterValidator",
+        "NAME": "{{cookiecutter.package_name}}.custom_password_validators.SpecialCharacterValidator",
     },
     {
-        "NAME": "one_big_thing.custom_password_validators.LowercaseUppercaseValidator",
+        "NAME": "{{cookiecutter.package_name}}.custom_password_validators.LowercaseUppercaseValidator",
     },
     {
         "NAME": "{{cookiecutter.package_name}}.custom_password_validators.BusinessPhraseSimilarityValidator",
