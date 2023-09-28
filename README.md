@@ -9,5 +9,5 @@
    - `ALLOWED_HOSTS`
    - `CSRF_TRUSTED_ORIGINS`
    - `CSP_DEFAULT_SRC`
-6. Update `privacy-policy.html`, `support.html` and `accessibility-statement.html` to match the new project, or remove if not needed
+6. Update `privacy-policy.html`, `support.html`, `verification.txt` (email template) and `accessibility-statement.html` to match the new project, or remove if not needed
    - Search for phrases like `<DATE>`, `<SYSTEM_NAME>` and `<SYSTEM_URL>` for places that need to be edited
