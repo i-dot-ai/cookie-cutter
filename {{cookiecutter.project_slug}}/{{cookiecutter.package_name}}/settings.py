@@ -67,6 +67,7 @@ MIDDLEWARE = [
     "csp.middleware.CSPMiddleware",
     "django_permissions_policy.PermissionsPolicyMiddleware",
     "django_permissions_policy.PermissionsPolicyMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 if DEBUG:
