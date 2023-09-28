@@ -23,7 +23,7 @@ check-python-code:
 	isort --check .
 	black --check .
 	flake8
-	bandit -ll -r one_big_thing
+	bandit -ll -r {{cookiecutter.package_name}}
 
 .PHONY: check-migrations
 check-migrations:

@@ -1,8 +1,14 @@
+import datetime
+
+import humanize
+
 import jinja2
 from django.templatetags.static import static
 from django.urls import reverse
 from markdown_it import MarkdownIt
 
+# `js-default` setting required to sanitize inputs
+# https://markdown-it-py.readthedocs.io/en/latest/security.html
 markdown_converter = MarkdownIt("js-default")
 
 
@@ -28,6 +34,17 @@ def markdown(text, cls=None):
     return html
 
 
+def humanize_timedelta(minutes=0, hours_limit=200, too_large_msg=""):
+    if minutes > (hours_limit * 60):
+        if not too_large_msg:
+            return f"More than {hours_limit} hours"
+        else:
+            return too_large_msg
+    else:
+        delta = datetime.timedelta(minutes=minutes)
+        return humanize.precisedelta(delta, minimum_unit="minutes")
+
+
 def environment(**options):
     extra_options = dict()
     env = jinja2.Environment(  # nosec B701
@@ -41,6 +58,7 @@ def environment(**options):
         {
             "static": static,
             "url": url,
+            "humanize_timedelta": humanize_timedelta,
         }
     )
     return env
