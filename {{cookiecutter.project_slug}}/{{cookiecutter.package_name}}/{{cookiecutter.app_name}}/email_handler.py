@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.urls import reverse
 from django.utils import timezone
 
-from {{cookiecutter.package_name}}.learning import models
+from {{cookiecutter.package_name}}.{{cookiecutter.app_name}} import models
 
 
 def _strip_microseconds(dt):
