@@ -3,7 +3,7 @@ import string
 
 from django.core.exceptions import ValidationError
 
-from {{cookiecutter.package_name}}.{{cookiecutter.app_name}}.constants import BUSINESS_SPECIFIC_WORDS
+from {{cookiecutter.package_name}}.{{cookiecutter.__app_name_formatted}}.constants import BUSINESS_SPECIFIC_WORDS
 
 
 class SpecialCharacterValidator:

@@ -1,7 +1,7 @@
 from django.core.management import BaseCommand
 from django_otp.plugins.otp_totp.models import TOTPDevice
 
-from {{cookiecutter.package_name}}.{{cookiecutter.app_name}}.models import User
+from {{cookiecutter.package_name}}.{{cookiecutter.__app_name_formatted}}.models import User
 
 
 class Command(BaseCommand):

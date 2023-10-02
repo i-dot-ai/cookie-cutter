@@ -36,7 +36,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
-    "{{cookiecutter.package_name}}.{{cookiecutter.app_name}}",
+    "{{cookiecutter.package_name}}.{{cookiecutter.__app_name_formatted}}",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -67,6 +67,7 @@ MIDDLEWARE = [
     "csp.middleware.CSPMiddleware",
     "django_permissions_policy.PermissionsPolicyMiddleware",
     "django_permissions_policy.PermissionsPolicyMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 if DEBUG:
@@ -168,7 +169,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "{{cookiecutter.app_name}}.User"
+AUTH_USER_MODEL = "{{cookiecutter.__app_name_formatted}}.User"
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True

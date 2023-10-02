@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
 
-from {{cookiecutter.package_name}}.{{cookiecutter.app_name}} import views, info_views
+from {{cookiecutter.package_name}}.{{cookiecutter.__app_name_formatted}} import views, info_views
 
 info_urlpatterns = [
     path("privacy-notice/", info_views.privacy_notice_view, name="privacy-notice"),

@@ -9,3 +9,5 @@ POSTGRES_USER={{cookiecutter.project_slug}}
 POSTGRES_PASSWORD=insecure
 PGPASSWORD=insecure
 DATABASE_URL="postgres://{{cookiecutter.project_slug}}:insecure@db:5432/{{cookiecutter.project_slug}}"
+EMAIL_BACKEND_TYPE=CONSOLE
+ENVIRONMENT=LOCAL
